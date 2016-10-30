@@ -2,7 +2,20 @@
 - Booking ticket
 - View trailer film 
 - Technical support: 
-  - ASP.NET MVC
+  - ASP.NET Web MVC
   - Entity Framework Code first 
   - SQL Server 
+  - Dependency Injection 
+  - Unit of Work 
 - Expected time: 3 week
+- Project structure:
+  - MegaCinemaCommon
+    - Containing common, helpers class
+  - MegaCinemaData
+    - Working with DB
+  - MegaCinemaModel
+    - Domain Entities of DB
+  - MegaCinemaUnitTest
+    - Unit test
+  - MegaCinemaWeb
+    - Main Project 
