@@ -30,7 +30,16 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
     <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -40,10 +49,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Infrastructures\DbFactory.cs" />
+    <Compile Include="Infrastructures\Disposeable.cs" />
+    <Compile Include="Infrastructures\IDbFactory.cs" />
+    <Compile Include="Infrastructures\IRepository.cs" />
     <Compile Include="Infrastructures\IUnitOfWork.cs" />
+    <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
+    <Compile Include="MegaCinemaDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\FilmRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MegaCinemaCommon\MegaCinemaCommon.csproj">
+      <Project>{6b3b7dc5-00c2-4e14-97f8-82ca9afd9391}</Project>
+      <Name>MegaCinemaCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MegaCinemaModel\MegaCinemaModel.csproj">
+      <Project>{22d035cb-14d2-46da-a05b-8fb173947826}</Project>
+      <Name>MegaCinemaModel</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

@@ -42,6 +42,16 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MegaCinemaCommon\MegaCinemaCommon.csproj">
+      <Project>{6b3b7dc5-00c2-4e14-97f8-82ca9afd9391}</Project>
+      <Name>MegaCinemaCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MegaCinemaData\MegaCinemaData.csproj">
+      <Project>{b5e28ef3-97b0-4dd8-9a13-d36937cf0e7b}</Project>
+      <Name>MegaCinemaData</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace MegaCinemaData.Infrastructures
 {
-    interface IUnitOfWork
+    public interface IUnitOfWork
     {
+        void Commit();
+        void BeginTransaction();
+        void CommitTransaction();
+        void RollbackTran();
     }
 }

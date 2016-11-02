@@ -52,6 +52,28 @@
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MegaCinemaCommon\MegaCinemaCommon.csproj">
+      <Project>{6b3b7dc5-00c2-4e14-97f8-82ca9afd9391}</Project>
+      <Name>MegaCinemaCommon</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MegaCinemaData\MegaCinemaData.csproj">
+      <Project>{b5e28ef3-97b0-4dd8-9a13-d36937cf0e7b}</Project>
+      <Name>MegaCinemaData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MegaCinemaModel\MegaCinemaModel.csproj">
+      <Project>{22d035cb-14d2-46da-a05b-8fb173947826}</Project>
+      <Name>MegaCinemaModel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MegaCinemaService\MegaCinemaService.csproj">
+      <Project>{c044287e-d44f-44ce-a73e-9b308935047f}</Project>
+      <Name>MegaCinemaService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MegaCinemaWeb\MegaCinemaWeb.csproj">
+      <Project>{4b7f9ea2-1a53-431f-ba04-c2ba58587e32}</Project>
+      <Name>MegaCinemaWeb</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Choose>
     <When Condition="'$(VisualStudioVersion)' == '10.0' And '$(IsCodedUITest)' == 'True'">
       <ItemGroup>
