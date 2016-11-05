@@ -1,0 +1,16 @@
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\bin\Debug\MegaCinemaData.dll.config
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\bin\Debug\MegaCinemaData.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\bin\Debug\MegaCinemaData.pdb
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\bin\Debug\EntityFramework.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\bin\Debug\EntityFramework.SqlServer.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\bin\Debug\MegaCinemaCommon.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\bin\Debug\MegaCinemaModel.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\bin\Debug\MegaCinemaCommon.pdb
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\bin\Debug\MegaCinemaModel.pdb
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\bin\Debug\EntityFramework.xml
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\bin\Debug\EntityFramework.SqlServer.xml
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\obj\Debug\MegaCinemaData.csprojResolveAssemblyReference.cache
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\obj\Debug\MegaCinemaData.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\obj\Debug\MegaCinemaData.pdb
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\obj\Debug\MegaCinemaData.Migrations.intialDB.resources
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\obj\Debug\MegaCinemaData.csproj.GenerateResource.Cache

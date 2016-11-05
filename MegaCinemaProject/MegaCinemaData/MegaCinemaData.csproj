@@ -57,6 +57,11 @@
     <Compile Include="Infrastructures\RepositoryBase.cs" />
     <Compile Include="Infrastructures\UnitOfWork.cs" />
     <Compile Include="MegaCinemaDBContext.cs" />
+    <Compile Include="Migrations\201611051704131_intialDB.cs" />
+    <Compile Include="Migrations\201611051704131_intialDB.Designer.cs">
+      <DependentUpon>201611051704131_intialDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\FilmRepository.cs" />
   </ItemGroup>
@@ -73,6 +78,11 @@
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611051704131_intialDB.resx">
+      <DependentUpon>201611051704131_intialDB.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

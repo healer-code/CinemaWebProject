@@ -11,8 +11,11 @@ namespace MegaCinemaWeb
     {
         protected void Application_Start()
         {
+            //register 
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
+
+            //connection string
         }
     }
 }
