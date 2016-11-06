@@ -29,7 +29,6 @@ namespace MegaCinemaData
             }
         }
         
-
         //Entity list
         public DbSet<Status> Statuss { get; set; }
         public DbSet<FilmRating> FilmRatings { get; set; }
