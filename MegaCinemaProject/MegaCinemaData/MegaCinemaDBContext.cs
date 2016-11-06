@@ -32,7 +32,16 @@ namespace MegaCinemaData
 
         //Entity list
         public DbSet<Status> Statuss { get; set; }
-
+        public DbSet<FilmRating> FilmRatings { get; set; }
+        public DbSet<FilmCategory> FilmCategories { get; set; }
+        public DbSet<FilmFormat> FilmFormats { get; set; }
+        public DbSet<DetailFormat> DetailFormats { get; set; }
+        public DbSet<DetailCategory> DetailCategories { get; set; }
+        public DbSet<Film> Films { get; set; }
+        public DbSet<AccountType> AccountTypes { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Regency> Regencys { get; set; }
+        public DbSet<Staff> Staffs { get; set; }
 
         //Assign attribute
         protected override void OnModelCreating(DbModelBuilder modelBuilder)

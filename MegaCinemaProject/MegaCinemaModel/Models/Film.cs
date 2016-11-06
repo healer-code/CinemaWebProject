@@ -3,10 +3,62 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
+using System.ComponentModel.DataAnnotations;
+using MegaCinemaModel.Abstracts;
+using System.ComponentModel;
 
 namespace MegaCinemaModel.Models
 {
-    class Film
+    [Table("Films")]
+    public class Film:Auditable
     {
+        [Key,DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        public int FilmID { get; set; }
+
+        [Required,DataType("nvarchar"),MaxLength(3),DefaultValue("FLM")]
+        public string FilmPrefix { get; set; }
+
+        [DataType("nvarchar"),MaxLength(100),DatabaseGenerated(DatabaseGeneratedOption.Computed)]
+        public string FilmCode { get; set; }
+
+        [Required, DataType("nvarchar"), MaxLength(100)]
+        public string FilmName { get; set; }
+
+        [Required,Range(0,int.MaxValue)]
+        public int FilmDuration { get; set; }
+
+        [Required]
+        public DateTime FilmFirstPremiered { get; set; }
+
+        [Required, DataType("nvarchar"), MaxLength(100)]
+        public string FilmLanguage { get; set; }
+
+        [Required, DataType("nvarchar"), MaxLength(100)]
+        public string FilmContent { get; set; }
+
+        [Required]
+        public DateTime FilmLastPremiered { get; set; }
+
+        [Required, DataType("nvarchar"), MaxLength(100)]
+        public string FilmPoster { get; set; }
+
+        [Required, DataType("nvarchar"), MaxLength(100)]
+        public string FilmCompanyRelease { get; set; }
+
+        [DataType("nvarchar"), MaxLength(100)]
+        public string FilmTrailer { get; set; }
+
+        [Required]
+        public int FilmRatingID { get; set; }
+        
+        [Required,DataType("nvarchar"),MaxLength(3)]
+        public string FilmStatus { get; set; }
+
+        [ForeignKey("FilmStatus")]
+        public virtual Status Status { get; set; }
+
+        [ForeignKey("FilmRatingID")]
+        public virtual FilmRating FilmRating { get; set; }
     }
 }

@@ -51,7 +51,16 @@
   <ItemGroup>
     <Compile Include="Abstracts\Auditable.cs" />
     <Compile Include="Abstracts\IAuditable.cs" />
+    <Compile Include="Models\AccountType.cs" />
+    <Compile Include="Models\Customer.cs" />
+    <Compile Include="Models\DetailCategory.cs" />
+    <Compile Include="Models\DetailFormat.cs" />
     <Compile Include="Models\Film.cs" />
+    <Compile Include="Models\FilmCategories.cs" />
+    <Compile Include="Models\FilmFormat.cs" />
+    <Compile Include="Models\FilmRating.cs" />
+    <Compile Include="Models\Regency.cs" />
+    <Compile Include="Models\Staff.cs" />
     <Compile Include="Models\Status.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
