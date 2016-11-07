@@ -7,7 +7,7 @@
   - SQL Server 
   - Dependency Injection 
   - Unit of Work 
-- From 3-11-2016 to 24-11-2016
+- From 8-11-2016 to 24-11-2016
 - Expected time: 3 week
 - Project structure:
   - MegaCinemaCommon
