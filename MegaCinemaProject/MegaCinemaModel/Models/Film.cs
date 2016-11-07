@@ -63,5 +63,8 @@ namespace MegaCinemaModel.Models
 
         public virtual ICollection<DetailFormat> DetailFormats { get; set; }
         public virtual ICollection<DetailCategory> DetailCategories { get; set; }
+        public virtual ICollection<FilmSession> FilmSessions { get; set; }
+
+        public virtual ICollection<BookingTicket> BookingTickets { get; set; }
     }
 }

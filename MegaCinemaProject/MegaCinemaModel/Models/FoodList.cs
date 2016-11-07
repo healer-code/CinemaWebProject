@@ -37,5 +37,7 @@ namespace MegaCinemaModel.Models
 
         [ForeignKey("FoodStatus")]
         public virtual Status Status { get; set; }
+
+        public virtual ICollection<TicketCombo> TicketCombos { get; set; }
     }
 }

@@ -44,5 +44,7 @@ namespace MegaCinemaModel.Models
 
         public virtual ICollection<FeatureDetail> FeatureDetails { get; set; }
         public virtual ICollection<RoomFilm> RoomFilms { get; set; }
+        public virtual ICollection<FilmSession> FilmSessions { get; set; }
+        public virtual ICollection<PromotionCine> PromotionCines { get; set; }
     }
 }

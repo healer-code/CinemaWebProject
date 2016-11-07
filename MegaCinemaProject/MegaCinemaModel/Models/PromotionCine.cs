@@ -14,5 +14,22 @@ namespace MegaCinemaModel.Models
     [Table("PromotionCines")]
     public class PromotionCine:Auditable
     {
+        [Key,Column(Order = 0 )]
+        public int PromotionID { get; set; }
+
+        [Key, Column(Order = 1)]
+        public int CinemaID { get; set; }
+
+        public string Description { get; set; }
+
+        [Required, DataType("nvarchar"), MaxLength(3)]
+        public string PromotionCineStatusID { get; set; }
+
+        [ForeignKey("CinemaID")]
+        public virtual Cinema Cinema { get; set; }
+
+        [ForeignKey("PromotionID")]
+        public virtual Promotion Promotion { get; set; }
+
     }
 }

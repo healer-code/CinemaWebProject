@@ -29,7 +29,7 @@ namespace MegaCinemaModel.Models
         [Required, DataType("nvarchar"), MaxLength(100)]
         public string SeatName { get; set; }
 
-        public int SeatCouple { get; set; }
+        public int SeatCoupleTwoID { get; set; }
 
         [Required]
         public int SeatRoomID { get; set; }
@@ -41,12 +41,17 @@ namespace MegaCinemaModel.Models
         public int SeatColumn { get; set; }
 
         [Required, DataType("nvarchar"), MaxLength(3)]
-        public string SeatStatus { get; set; }
+        public string SeatStatusID { get; set; }
 
-        public virtual SeatList SeatDetailCouple { get; set; }
 
-        [ForeignKey("SeatStatus")]
+
+        [ForeignKey("SeatStatusID")]
         public virtual Status Status { get; set; }
 
+        [ForeignKey("SeatCoupleTwoID")]
+        public virtual SeatList SeatDetailCoupleTwo { get; set; }
+
+        public virtual ICollection<SeatList> SeatDetailCoupleOne { get; set; }
+        public virtual ICollection<SeatMaintenance> SeatMaintenances { get; set; }
     }
 }

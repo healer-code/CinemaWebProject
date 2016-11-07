@@ -46,5 +46,9 @@ namespace MegaCinemaModel.Models
 
         [ForeignKey("RoomStatusID")]
         public virtual Status Status { get; set; }
+
+        public virtual ICollection<SeatMaintenance> SeatMaintenances { get; set; }
+
+        public virtual ICollection<BookingTicket> BookingTickets { get; set; }
     }
 }

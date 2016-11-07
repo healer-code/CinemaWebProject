@@ -14,10 +14,28 @@ namespace MegaCinemaModel.Models
     [Table("SeatMaintenances")]
     public class SeatMaintenance:Auditable
     {
+        [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
+
+        [Required]
         public int SeatID { get; set; }
+
+        [Required]
         public int RoomID { get; set; }
+
+        [DataType("nvarchar"), MaxLength(100)]
         public string Description { get; set; }
-        public string SeatStatus { get; set; }
+
+        [Required, DataType("nvarchar"), MaxLength(3)]
+        public string SeatStatusID { get; set; }
+
+        [ForeignKey("SeatStatusID")]
+        public virtual Status Status { get; set; }
+
+        [ForeignKey("SeatID")]
+        public virtual SeatList SeatList { get; set; }
+
+        [ForeignKey("RoomID")]
+        public virtual RoomFilm RoomFilm { get; set; }
     }
 }
