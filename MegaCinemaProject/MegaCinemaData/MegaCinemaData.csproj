@@ -58,6 +58,14 @@
     <Compile Include="Infrastructures\UnitOfWork.cs" />
     <Compile Include="MegaCinemaDBContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\AccountTypeRepository.cs" />
+    <Compile Include="Repositories\BookingTicketRepository.cs" />
+    <Compile Include="Repositories\CinemaFeatureRepository.cs" />
+    <Compile Include="Repositories\CinemaRepository.cs" />
+    <Compile Include="Repositories\CustomerRepository.cs" />
+    <Compile Include="Repositories\DetailCategoryRepository.cs" />
+    <Compile Include="Repositories\DetailFormatRepository.cs" />
+    <Compile Include="Repositories\FeatureDetailRepository.cs" />
     <Compile Include="Repositories\FilmRepository.cs" />
   </ItemGroup>
   <ItemGroup>

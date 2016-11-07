@@ -31,5 +31,7 @@ namespace MegaCinemaModel.Models
         [ForeignKey("PromotionID")]
         public virtual Promotion Promotion { get; set; }
 
+        [ForeignKey("PromotionCineStatusID")]
+        public virtual Status Status { get; set; }
     }
 }
