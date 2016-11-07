@@ -28,5 +28,7 @@ namespace MegaCinemaModel.Models
 
         [ForeignKey("CinemaID")]
         public virtual Cinema Cinema { get; set; }
+
+
     }
 }

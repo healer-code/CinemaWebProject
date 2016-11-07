@@ -60,5 +60,8 @@ namespace MegaCinemaModel.Models
 
         [ForeignKey("FilmRatingID")]
         public virtual FilmRating FilmRating { get; set; }
+
+        public virtual ICollection<DetailFormat> DetailFormats { get; set; }
+        public virtual ICollection<DetailCategory> DetailCategories { get; set; }
     }
 }

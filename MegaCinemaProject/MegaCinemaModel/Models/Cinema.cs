@@ -41,5 +41,8 @@ namespace MegaCinemaModel.Models
 
         [ForeignKey("CinemaStatus")]
         public virtual Status Status { get; set; }
+
+        public virtual ICollection<FeatureDetail> FeatureDetails { get; set; }
+        public virtual ICollection<RoomFilm> RoomFilms { get; set; }
     }
 }
