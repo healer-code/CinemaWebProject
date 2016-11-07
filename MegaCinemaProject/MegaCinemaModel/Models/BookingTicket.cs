@@ -11,12 +11,8 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace MegaCinemaModel.Models
 {
-    [Table("SeatTypes")]
-    public class SeatType:Auditable
+    [Table("BookingTickets")]
+    public class BookingTicket:Auditable
     {
-        public int SeatTypeID { get; set; }
-        public string SeatTypeName { get; set; }
-        public decimal SeatTypeSurcharge { get; set; }
-        public string SeatTypeStatus { get; set; }
     }
 }

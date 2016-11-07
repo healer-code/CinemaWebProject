@@ -69,5 +69,7 @@ namespace MegaCinemaModel.Models
 
         [ForeignKey("StaffStatus")]
         public virtual Status Status { get; set; }
+
+        public virtual Cinema Cinema { get; set; }
     }
 }
