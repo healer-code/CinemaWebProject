@@ -154,6 +154,10 @@ namespace MegaCinemaData
                 .WillCascadeOnDelete(false);
 
             //Film categories
+            modelBuilder.Entity<FilmCategory>()
+               .HasMany(e => e.DetailCategories)
+               .WithRequired(e => e.FilmCategory)
+               .WillCascadeOnDelete(false);
 
             //Film Format
             modelBuilder.Entity<FilmFormat>()
@@ -167,6 +171,21 @@ namespace MegaCinemaData
                 .WithRequired(e => e.Film)
                 .WillCascadeOnDelete(false);
 
+            modelBuilder.Entity<Film>()
+                .HasMany(e => e.DetailFormats)
+                .WithRequired(e => e.Film)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Film>()
+                .HasMany(e => e.FilmSessions)
+                .WithRequired(e => e.Film)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Film>()
+                .HasMany(e => e.BookingTickets)
+                .WithRequired(e => e.Film)
+                .WillCascadeOnDelete(false);
+
             //Film rating
             modelBuilder.Entity<FilmRating>()
                 .HasMany(e => e.Films)
@@ -174,29 +193,98 @@ namespace MegaCinemaData
                 .WillCascadeOnDelete(false);
 
             //Detail format
+
             //Detail Category
 
             //Customer 
+            modelBuilder.Entity<Customer>()
+                .HasMany(e => e.BookingTickets)
+                .WithRequired(e => e.Customer)
+                .WillCascadeOnDelete(false);
 
             //Account type
+            modelBuilder.Entity<AccountType>()
+                .HasMany(e => e.Customers)
+                .WithRequired(e => e.AccountType)
+                .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<AccountType>()
+                .Property(e => e.TypeDiscount)
+                .HasPrecision(18, 0);
 
             //Staff
+            modelBuilder.Entity<Staff>()
+                .HasMany(e => e.Cinemas)
+                .WithRequired(e => e.Staff)
+                .WillCascadeOnDelete(false);
 
             //Regency
+            modelBuilder.Entity<Regency>()
+                .HasMany(e => e.Staffs)
+                .WithRequired(e => e.Regency)
+                .WillCascadeOnDelete(false);
 
             //Cinema
+            modelBuilder.Entity<Cinema>()
+               .HasMany(e => e.FeatureDetails)
+               .WithRequired(e => e.Cinema)
+               .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Cinema>()
+               .HasMany(e => e.RoomFilms)
+               .WithRequired(e => e.Cinema)
+               .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Cinema>()
+               .HasMany(e => e.FilmSessions)
+               .WithRequired(e => e.Cinema)
+               .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<Cinema>()
+               .HasMany(e => e.PromotionCines)
+               .WithRequired(e => e.Cinema)
+               .WillCascadeOnDelete(false);
 
             //Cinema Feature
+            modelBuilder.Entity<CinemaFeature>()
+               .HasMany(e => e.FeatureDetails)
+               .WithRequired(e => e.CinemaFeature)
+               .WillCascadeOnDelete(false);
 
             //Feature detail
 
             //Food Lists
+            modelBuilder.Entity<FoodList>()
+               .HasMany(e => e.TicketCombos)
+               .WithRequired(e => e.FoodList)
+               .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<FoodList>()
+                .Property(e => e.FoodPrice)
+                .HasPrecision(18, 0);
 
             //Seat Type
+            modelBuilder.Entity<SeatType>()
+               .HasMany(e => e.TicketDetails)
+               .WithRequired(e => e.SeatType)
+               .WillCascadeOnDelete(false);
 
             //Room Film
+            modelBuilder.Entity<RoomFilm>()
+               .HasMany(e => e.SeatMaintenances)
+               .WithRequired(e => e.RoomFilm)
+               .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<RoomFilm>()
+               .HasMany(e => e.BookingTickets)
+               .WithRequired(e => e.RoomFilm)
+               .WillCascadeOnDelete(false);
 
             //Seat List
+            modelBuilder.Entity<SeatList>()
+               .HasMany(e => e.SeatMaintenances)
+               .WithRequired(e => e.SeatList)
+               .WillCascadeOnDelete(false);
 
             //Time Session
 
@@ -205,14 +293,61 @@ namespace MegaCinemaData
             //Film session
 
             //Ticket Categories
+            modelBuilder.Entity<TicketCategory>()
+               .HasMany(e => e.TicketDetails)
+               .WithRequired(e => e.TicketCategory)
+               .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<TicketCategory>()
+                .Property(e => e.TicketCatePrice)
+                .HasPrecision(18, 0);
 
             //Booking ticket
+            modelBuilder.Entity<BookingTicket>()
+               .HasMany(e => e.TicketDetails)
+               .WithRequired(e => e.BookingTicket)
+               .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<BookingTicket>()
+               .HasMany(e => e.TicketCombos)
+               .WithRequired(e => e.BookingTicket)
+               .WillCascadeOnDelete(false);
+
+            modelBuilder.Entity<BookingTicket>()
+                .Property(e => e.BookingTicketPrice)
+                .HasPrecision(18, 0);
 
             //Ticket Detail
+            modelBuilder.Entity<TicketDetail>()
+                .Property(e => e.SeatPrice)
+                .HasPrecision(18, 0);
+
+            modelBuilder.Entity<TicketDetail>()
+                .Property(e => e.SeatDiscount)
+                .HasPrecision(18, 0);
+
+            modelBuilder.Entity<TicketDetail>()
+                .Property(e => e.TotalPrice)
+                .HasPrecision(18, 0);
 
             //Ticket Combo
+            modelBuilder.Entity<TicketCombo>()
+                .Property(e => e.FoodPrice)
+                .HasPrecision(18, 0);
+
+            modelBuilder.Entity<TicketCombo>()
+                .Property(e => e.FoodDiscount)
+                .HasPrecision(18, 0);
+
+            modelBuilder.Entity<TicketCombo>()
+                .Property(e => e.FoodTotalPrice)
+                .HasPrecision(18, 0);
 
             //Promotion 
+            modelBuilder.Entity<Promotion>()
+               .HasMany(e => e.PromotionCines)
+               .WithRequired(e => e.Promotion)
+               .WillCascadeOnDelete(false);
 
             //Promotion Cinema
 

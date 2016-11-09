@@ -1,0 +1,5 @@
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaCommon\bin\Debug\MegaCinemaCommon.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaCommon\bin\Debug\MegaCinemaCommon.pdb
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaCommon\obj\Debug\MegaCinemaCommon.csprojResolveAssemblyReference.cache
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaCommon\obj\Debug\MegaCinemaCommon.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaCommon\obj\Debug\MegaCinemaCommon.pdb

@@ -1,4 +1,6 @@
 ﻿using MegaCinemaModel.Abstracts;
+using System.Collections;
+using System.Collections.Generic;
 using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
@@ -29,6 +31,6 @@ namespace MegaCinemaModel.Models
         [ForeignKey("StaffStatus")]
         public virtual Status Status { get; set; }
 
-        public virtual Cinema Cinema { get; set; }
+        public virtual ICollection<Cinema> Cinemas { get; set; }
     }
 }
