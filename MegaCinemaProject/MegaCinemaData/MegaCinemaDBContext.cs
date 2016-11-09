@@ -7,6 +7,7 @@ using System.Data.Entity;
 using System.Linq.Expressions;
 using System.Data.Entity.Validation;
 using MegaCinemaModel.Models;
+using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace MegaCinemaData
 {
@@ -62,6 +63,10 @@ namespace MegaCinemaData
         //Assign attribute
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
+            //Asp.net identity
+            modelBuilder.Entity<IdentityUserRole>().HasKey(i => new { i.UserId, i.RoleId }).ToTable("ApplicationUserRoles");
+            modelBuilder.Entity<IdentityUserLogin>().HasKey(i => i.UserId).ToTable("ApplicationUserLogins");
+
             //status
             modelBuilder.Entity<Status>()
                 .HasMany(e => e.Films)
