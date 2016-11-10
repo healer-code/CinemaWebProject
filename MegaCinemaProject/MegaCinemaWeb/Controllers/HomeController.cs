@@ -4,6 +4,8 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using MegaCinemaService;
+using AutoMapper;
+using MegaCinemaWeb.Models;
 
 namespace MegaCinemaWeb.Controllers
 {
@@ -20,7 +22,8 @@ namespace MegaCinemaWeb.Controllers
         public ActionResult Index()
         {
             var result = _statusService.GetAll();
-            return View(result);
+            var resultVm = Mapper.Map<IEnumerable<StatusViewModel>>(result);
+            return View(resultVm);
         }
     }
 }

@@ -1,11 +1,12 @@
-﻿@using MegaCinemaModel.Models;
-@model IEnumerable<Status>
+﻿@using MegaCinemaWeb.Models;
+@model IEnumerable<StatusViewModel>
 
 @{
     ViewBag.Title = "Index";
 }
 
 <h2>Index</h2>
+
 @{ 
     foreach(var item in Model)
     {
@@ -13,3 +14,4 @@
     }
 }
 
+@Html.Partial(Url.Content("../Shared/_loginPartial"))

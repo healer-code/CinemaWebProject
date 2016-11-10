@@ -14,6 +14,13 @@ namespace MegaCinemaWeb
             routes.IgnoreRoute("{resource}.axd/{*pathInfo}");
 
             routes.MapRoute(
+                name: "Register",
+                url: "dang-ki",
+                defaults: new { controller = "Account", action = "Register", id = UrlParameter.Optional },
+                namespaces: new[] { "MegaCinemaWeb.Controllers" }
+            );
+
+            routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Home", action = "Index", id = UrlParameter.Optional },

@@ -79,3 +79,5 @@ D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaC
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaWeb\obj\Debug\MegaCinemaWeb.pdb
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaWeb\bin\Microsoft.Owin.Host.SystemWeb.dll
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaWeb\bin\Microsoft.Owin.Host.SystemWeb.xml
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaWeb\bin\AutoMapper.dll
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaWeb\bin\AutoMapper.xml

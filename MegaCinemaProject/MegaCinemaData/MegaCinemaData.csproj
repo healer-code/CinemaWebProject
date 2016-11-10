@@ -105,6 +105,14 @@
     <Compile Include="Migrations\201611100124091_UpdateStatusProperty.Designer.cs">
       <DependentUpon>201611100124091_UpdateStatusProperty.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611100804299_UpdateDB.cs" />
+    <Compile Include="Migrations\201611100804299_UpdateDB.Designer.cs">
+      <DependentUpon>201611100804299_UpdateDB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611100918109_UpdateAspIdentity.cs" />
+    <Compile Include="Migrations\201611100918109_UpdateAspIdentity.Designer.cs">
+      <DependentUpon>201611100918109_UpdateAspIdentity.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AccountTypeRepository.cs" />
@@ -141,6 +149,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611100124091_UpdateStatusProperty.resx">
       <DependentUpon>201611100124091_UpdateStatusProperty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611100804299_UpdateDB.resx">
+      <DependentUpon>201611100804299_UpdateDB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611100918109_UpdateAspIdentity.resx">
+      <DependentUpon>201611100918109_UpdateAspIdentity.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

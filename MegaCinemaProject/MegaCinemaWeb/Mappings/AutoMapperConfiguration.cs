@@ -2,6 +2,9 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
+using AutoMapper;
+using MegaCinemaModel.Models;
+using MegaCinemaWeb.Models;
 
 namespace MegaCinemaWeb.Mappings
 {
@@ -9,7 +12,7 @@ namespace MegaCinemaWeb.Mappings
     {
         public static void Configure()
         {
-
+            Mapper.CreateMap<Status, StatusViewModel>();
         }
     }
 }

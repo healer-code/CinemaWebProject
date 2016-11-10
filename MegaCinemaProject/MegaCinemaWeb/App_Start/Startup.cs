@@ -12,12 +12,14 @@ using System.Web.Mvc;
 using System.Diagnostics;
 using Microsoft.Owin.Security.DataProtection;
 using System.Web;
+using MegaCinemaModel.Models;
+using Microsoft.AspNet.Identity;
 
 [assembly: OwinStartup(typeof(MegaCinemaWeb.App_Start.Startup))]
 
 namespace MegaCinemaWeb.App_Start
 {
-    public class Startup
+    public partial class Startup
     {
         public void Configuration(IAppBuilder app)
         {
@@ -53,7 +55,7 @@ namespace MegaCinemaWeb.App_Start
             //set web api and controller
 
             //asp identity 
-            //builder.RegisterType<ApplicationUserStore>().As<IUserStore<ApplicationUser>>().InstancePerRequest();
+            builder.RegisterType<ApplicationUserStore>().As<IUserStore<ApplicationUser>>().InstancePerRequest();
             builder.RegisterType<ApplicationUserManager>().AsSelf().InstancePerRequest();
             builder.RegisterType<ApplicationSignInManager>().AsSelf().InstancePerRequest();
             builder.Register(c => HttpContext.Current.GetOwinContext().Authentication).InstancePerRequest();
