@@ -17,7 +17,8 @@ namespace MegaCinemaWeb.Areas.AdminDashboard
             context.MapRoute(
                 "AdminDashboard_default",
                 "AdminDashboard/{controller}/{action}/{id}",
-                new { action = "Index", id = UrlParameter.Optional }                
+                new { action = "Index", id = UrlParameter.Optional },
+                namespaces: new[] { "MegaCinemaWeb.Areas.AdminDashboard.Controllers" }
             );
         }
     }

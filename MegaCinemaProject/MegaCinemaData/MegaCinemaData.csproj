@@ -101,6 +101,10 @@
     <Compile Include="Migrations\201611091749137_AddAutoIndexCreate.Designer.cs">
       <DependentUpon>201611091749137_AddAutoIndexCreate.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611100124091_UpdateStatusProperty.cs" />
+    <Compile Include="Migrations\201611100124091_UpdateStatusProperty.Designer.cs">
+      <DependentUpon>201611100124091_UpdateStatusProperty.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AccountTypeRepository.cs" />
@@ -112,6 +116,7 @@
     <Compile Include="Repositories\DetailFormatRepository.cs" />
     <Compile Include="Repositories\FeatureDetailRepository.cs" />
     <Compile Include="Repositories\FilmRepository.cs" />
+    <Compile Include="Repositories\StatusRepository.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MegaCinemaCommon\MegaCinemaCommon.csproj">
@@ -133,6 +138,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611091749137_AddAutoIndexCreate.resx">
       <DependentUpon>201611091749137_AddAutoIndexCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611100124091_UpdateStatusProperty.resx">
+      <DependentUpon>201611100124091_UpdateStatusProperty.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

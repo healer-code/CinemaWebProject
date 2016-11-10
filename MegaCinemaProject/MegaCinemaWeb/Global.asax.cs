@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using System.Web.Routing;
+using AutoMapper;
 
 namespace MegaCinemaWeb
 {
@@ -14,7 +15,7 @@ namespace MegaCinemaWeb
             //register 
             AreaRegistration.RegisterAllAreas();
             RouteConfig.RegisterRoutes(RouteTable.Routes);
-
+            auto
             //connection string
         }
     }

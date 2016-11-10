@@ -17,6 +17,9 @@ namespace MegaCinemaModel.Models
         [MaxLength(100)]
         public string StatusName { get; set; }
 
+        [DataType("nvarchar"),MaxLength(100)]
+        public string StatusDescription { get; set; }
+
         public virtual ICollection<Film> Films { get; set; }
         public virtual ICollection<Customer> Customers { get; set; }
         public virtual ICollection<Staff> Staffs { get; set; }

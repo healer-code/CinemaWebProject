@@ -41,6 +41,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StatusService.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MegaCinemaCommon\MegaCinemaCommon.csproj">
@@ -50,6 +51,10 @@
     <ProjectReference Include="..\MegaCinemaData\MegaCinemaData.csproj">
       <Project>{b5e28ef3-97b0-4dd8-9a13-d36937cf0e7b}</Project>
       <Name>MegaCinemaData</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\MegaCinemaModel\MegaCinemaModel.csproj">
+      <Project>{22d035cb-14d2-46da-a05b-8fb173947826}</Project>
+      <Name>MegaCinemaModel</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

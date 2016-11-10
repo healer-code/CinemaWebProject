@@ -32,3 +32,4 @@ D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaC
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\obj\Debug\MegaCinemaData.Migrations.InitialDB.resources
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\obj\Debug\MegaCinemaData.csproj.GenerateResource.Cache
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\obj\Debug\MegaCinemaData.Migrations.AddAutoIndexCreate.resources
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\obj\Debug\MegaCinemaData.Migrations.UpdateStatusProperty.resources

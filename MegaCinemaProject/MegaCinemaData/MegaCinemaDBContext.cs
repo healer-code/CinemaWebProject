@@ -11,7 +11,7 @@ using Microsoft.AspNet.Identity.EntityFramework;
 
 namespace MegaCinemaData
 {
-    public class MegaCinemaDBContext:DbContext
+    public class MegaCinemaDBContext : IdentityDbContext<ApplicationUser>
     {
         public MegaCinemaDBContext():base("MegaCinemaDB")
         {
@@ -60,6 +60,10 @@ namespace MegaCinemaData
         public DbSet<PromotionCine> PromotionCines { get; set; }
         public DbSet<Parameter> Parameters { get; set; }
 
+        public static MegaCinemaDBContext Create()
+        {
+            return new MegaCinemaDBContext();
+        }
         //Assign attribute
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
