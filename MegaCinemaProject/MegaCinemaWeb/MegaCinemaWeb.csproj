@@ -242,6 +242,10 @@
     <Folder Include="Areas\AdminDashboard\Models\" />
     <Folder Include="Areas\AdminDashboard\Views\Home\" />
     <Folder Include="Areas\AdminDashboard\Views\Shared\" />
+    <Folder Include="Assets\" />
+    <Folder Include="Content\Avatars\" />
+    <Folder Include="Content\Images\" />
+    <Folder Include="Content\Promotion\" />
   </ItemGroup>
   <ItemGroup>
     <WCFMetadata Include="Service References\" />

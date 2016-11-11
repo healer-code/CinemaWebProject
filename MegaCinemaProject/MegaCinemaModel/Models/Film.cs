@@ -37,8 +37,7 @@ namespace MegaCinemaModel.Models
         [Required, DataType("nvarchar"), MaxLength(100)]
         public string FilmContent { get; set; }
 
-        [Required]
-        public DateTime FilmLastPremiered { get; set; }
+        public DateTime? FilmFinishPremiered { get; set; }
 
         [Required, DataType("nvarchar"), MaxLength(100)]
         public string FilmPoster { get; set; }

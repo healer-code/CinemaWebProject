@@ -30,6 +30,9 @@ namespace MegaCinemaModel.Models
         public decimal FoodPrice { get; set; }
 
         [DataType("nvarchar"), MaxLength(100)]
+        public string FoodDescription { get; set; }
+
+        [DataType("nvarchar"), MaxLength(100)]
         public string FoodPoster { get; set; }
 
         [Required, DataType("nvarchar"), MaxLength(3)]
