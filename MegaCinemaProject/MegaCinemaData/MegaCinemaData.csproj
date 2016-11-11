@@ -113,6 +113,10 @@
     <Compile Include="Migrations\201611100918109_UpdateAspIdentity.Designer.cs">
       <DependentUpon>201611100918109_UpdateAspIdentity.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201611110112036_UpdateApplicationUser.cs" />
+    <Compile Include="Migrations\201611110112036_UpdateApplicationUser.Designer.cs">
+      <DependentUpon>201611110112036_UpdateApplicationUser.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\AccountTypeRepository.cs" />
@@ -125,6 +129,7 @@
     <Compile Include="Repositories\FeatureDetailRepository.cs" />
     <Compile Include="Repositories\FilmRepository.cs" />
     <Compile Include="Repositories\StatusRepository.cs" />
+    <Compile Include="SampleData\SampleData.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MegaCinemaCommon\MegaCinemaCommon.csproj">
@@ -155,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611100918109_UpdateAspIdentity.resx">
       <DependentUpon>201611100918109_UpdateAspIdentity.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611110112036_UpdateApplicationUser.resx">
+      <DependentUpon>201611110112036_UpdateApplicationUser.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

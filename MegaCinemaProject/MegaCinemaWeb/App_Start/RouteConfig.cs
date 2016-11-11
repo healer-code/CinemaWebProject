@@ -16,7 +16,7 @@ namespace MegaCinemaWeb
             routes.MapRoute(
                 name: "Register",
                 url: "dang-ki",
-                defaults: new { controller = "Account", action = "Register", id = UrlParameter.Optional },
+                defaults: new { controller = "Account", action = "CustomerRegister", id = UrlParameter.Optional },
                 namespaces: new[] { "MegaCinemaWeb.Controllers" }
             );
 

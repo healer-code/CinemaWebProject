@@ -13,9 +13,4 @@ namespace MegaCinemaCommon.SqlScriptCodeFirst
             return string.Format("ALTER TABLE {0} DROP COLUMN {1} ALTER TABLE {0} ADD {1} AS {2} + CONVERT(VARCHAR(MAX),{3})", NameTable, NameColumn, Prefix, ID);
         }
     }
-
-    public class DataClassGenerate
-    {
-
-    }
 }

@@ -6,6 +6,8 @@ using Microsoft.AspNet.Identity.Owin;
 using Microsoft.Owin.Security;
 using System;
 using System.Collections.Generic;
+using System.Data.Entity.Validation;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web;
@@ -15,8 +17,8 @@ namespace MegaCinemaWeb.Controllers
 {
     public class AccountController : Controller
     {
-        private ApplicationSignInManager _signInManager;
-        private ApplicationUserManager _userManager;
+        ApplicationSignInManager _signInManager;
+        ApplicationUserManager _userManager;
 
         public AccountController()
         {
@@ -72,13 +74,16 @@ namespace MegaCinemaWeb.Controllers
             {
                 var user = new ApplicationUser
                 {
-                    UserName = model.UserName,
-                    Email = model.Email,
-                    EmailConfirmed = true,
-                    Birthday = DateTime.Now,
                     FirstName = model.FirstName,
                     LastName = model.LastName,
+                    Birthday = model.Birthday,
+                    Sex = model.Sex,
+                    SSN = model.SSN,
                     Address = model.Address,
+                    District = model.District,
+                    City = model.City,
+                    Email = model.Email,                    
+                    EmailConfirmed = true,                                      
                     PhoneNumber = model.PhoneNumber,
                 };
 
@@ -175,47 +180,69 @@ namespace MegaCinemaWeb.Controllers
             return View();
         }
 
-        //[HttpPost]
-        //[AllowAnonymous]
-        //[ValidateAntiForgeryToken]
-        //public async Task<ActionResult> CustomerRegister(RegisterCustomerViewModel model)
-        //{
-        //    if (ModelState.IsValid)
-        //    {
-        //        var user = new ApplicationUser
-        //        {
-        //            UserName = model.UserName,
-        //            Email = model.Email,
-        //            EmailConfirmed = true,
-        //            Birthday = DateTime.Now,
-        //            FullName = model.FullName,
-        //            Address = model.Address,
-        //            PhoneNumber = model.PhoneNumber,
-        //            Customer = new Customer
-        //            {
-        //                Point = 100,
-        //            }
-        //        };
+        [HttpPost]
+        [AllowAnonymous]
+        [ValidateAntiForgeryToken]
+        public async Task<ActionResult> CustomerRegister(RegisterCustomerViewModel model)
+        {
+            if (ModelState.IsValid)
+            {
+                var user = new ApplicationUser
+                {
+                    FirstName = model.FirstName,
+                    LastName = model.LastName,
+                    Birthday = DateTime.Parse("01/01/1995"),
+                    Sex = model.Sex,
+                    SSN = model.SSN,
+                    Address = model.Address,
+                    District = model.District,
+                    City = model.City,
+                    Email = model.Email,
+                    EmailConfirmed = true,
+                    PhoneNumber = model.PhoneNumber,
+                    UserName = model.Email,
+                    Customer = new Customer
+                    {
+                        CustomerPoint = 0,
+                        CustomerPrefix = "CUS",
+                        CustomerAccountType = 4,
+                        CustomerStatus = "NAT",
+                    },
+                };
+                try
+                {
+                    var result = await UserManager.CreateAsync(user, model.Password);
+                    if (result.Succeeded)
+                    {
+                        await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
 
+                        //For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
+                        //Send an email with this link
+                        //string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
+                        //var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
+                        //await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
 
-        //        var result = await UserManager.CreateAsync(user, model.Password);
-        //        if (result.Succeeded)
-        //        {
-        //            await SignInManager.SignInAsync(user, isPersistent: false, rememberBrowser: false);
+                        return RedirectToAction("Index", "Home");
+                    }
+                    AddErrors(result);
+                }
+                catch(DbEntityValidationException ex)
+                {
+                    foreach(var eve in ex.EntityValidationErrors)
+                    {
+                        Debug.WriteLine("Entity of type \"{0}\" in state \"{1}\" has the following validation errors:",
+            eve.Entry.Entity.GetType().Name, eve.Entry.State);
+                        foreach (var ve in eve.ValidationErrors)
+                        {
+                            Debug.WriteLine("- Property: \"{0}\", Error: \"{1}\"",
+                                ve.PropertyName, ve.ErrorMessage);
+                        }
+                    }
+                }           
+            }
 
-        //            // For more information on how to enable account confirmation and password reset please visit http://go.microsoft.com/fwlink/?LinkID=320771
-        //            // Send an email with this link
-        //            //string code = await UserManager.GenerateEmailConfirmationTokenAsync(user.Id);
-        //            //var callbackUrl = Url.Action("ConfirmEmail", "Account", new { userId = user.Id, code = code }, protocol: Request.Url.Scheme);
-        //            //await UserManager.SendEmailAsync(user.Id, "Confirm your account", "Please confirm your account by clicking <a href=\"" + callbackUrl + "\">here</a>");
-
-        //            return RedirectToAction("Index", "Home");
-        //        }
-        //        AddErrors(result);
-        //    }
-
-        //    // If we got this far, something failed, redisplay form
-        //    return View(model);
-        //}
+            // If we got this far, something failed, redisplay form
+            return View(model);
+        }
     }
 }

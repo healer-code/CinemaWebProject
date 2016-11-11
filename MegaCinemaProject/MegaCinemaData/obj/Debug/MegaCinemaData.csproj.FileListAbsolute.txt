@@ -35,3 +35,4 @@ D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaC
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\obj\Debug\MegaCinemaData.Migrations.UpdateStatusProperty.resources
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\obj\Debug\MegaCinemaData.Migrations.UpdateDB.resources
 D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\obj\Debug\MegaCinemaData.Migrations.UpdateAspIdentity.resources
+D:\ALL DOCUMENT OF TERM\CODE\REAL PROJECT\CINEMA-WEB\Www\MegaCinemaProject\MegaCinemaProject\MegaCinemaData\obj\Debug\MegaCinemaData.Migrations.UpdateApplicationUser.resources

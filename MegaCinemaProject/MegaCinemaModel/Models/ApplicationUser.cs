@@ -30,9 +30,6 @@ namespace MegaCinemaModel.Models
         [Required, DataType("varchar"), MaxLength(12)]
         public string SSN { get; set; }
 
-        [Required, DataType("varchar"), MaxLength(12)]
-        public string Phone { get; set; }
-
         [Required, DataType("nvarchar"), MaxLength(100)]
         public string Address { get; set; }
 

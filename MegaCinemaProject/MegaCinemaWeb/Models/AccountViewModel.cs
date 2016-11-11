@@ -69,24 +69,25 @@ namespace MegaCinemaWeb.Models
 
     public class RegisterViewModel
     {
-        [Required(ErrorMessage = "Bạn cần nhập tên.")]
         public string FirstName { set; get; }
-
-        [Required(ErrorMessage = "Bạn cần nhập họ.")]
         public string LastName { set; get; }
 
-        [Required(ErrorMessage = "Bạn cần nhập tên đăng nhập.")]
-        public string UserName { set; get; }
-
-        [Required(ErrorMessage = "Bạn cần nhập mật khẩu.")]
-        [MinLength(6, ErrorMessage = "Mật khẩu phải có ít nhất 6 ký tự")]
-        public string Password { set; get; }
+        [DisplayFormat(DataFormatString = "{0:MMM dd, yyyy}")]
+        public DateTime Birthday { get; set; }
+        public bool Sex { get; set; }      
+        [MaxLength(13)]
+        public string SSN { get; set; }
+        public string Address { set; get; }
+        public string District { get; set; }
+        public string City { get; set; }
 
         [Required(ErrorMessage = "Bạn cần nhập email.")]
         [EmailAddress(ErrorMessage = "Địa chỉ email không đúng.")]
         public string Email { set; get; }
 
-        public string Address { set; get; }
+        [Required(ErrorMessage = "Bạn cần nhập mật khẩu.")]
+        [MinLength(8, ErrorMessage = "Mật khẩu phải có ít nhất 8 ký tự")]
+        public string Password { set; get; }
 
         [Required(ErrorMessage = "Bạn cần nhập số điện thoại.")]
         public string PhoneNumber { set; get; }
@@ -94,26 +95,28 @@ namespace MegaCinemaWeb.Models
 
     public class RegisterCustomerViewModel
     {
-        [Required(ErrorMessage = "Bạn cần nhập tên.")]
-        public string FullName { set; get; }
+        public string FirstName { set; get; }
+        public string LastName { set; get; }
 
-        [Required(ErrorMessage = "Bạn cần nhập tên đăng nhập.")]
-        public string UserName { set; get; }
-
-        [Required(ErrorMessage = "Bạn cần nhập mật khẩu.")]
-        [MinLength(6, ErrorMessage = "Mật khẩu phải có ít nhất 6 ký tự")]
-        public string Password { set; get; }
+        //[DisplayFormat(DataFormatString = "{0:dd/mm/yyy")]
+        //public DateTime Birthday { get; set; }
+        public bool Sex { get; set; }
+        [MaxLength(13)]
+        public string SSN { get; set; }
+        public string Address { set; get; }
+        public string District { get; set; }
+        public string City { get; set; }
 
         [Required(ErrorMessage = "Bạn cần nhập email.")]
         [EmailAddress(ErrorMessage = "Địa chỉ email không đúng.")]
         public string Email { set; get; }
 
-        public string Address { set; get; }
+        [Required(ErrorMessage = "Bạn cần nhập mật khẩu.")]
+        [MinLength(8, ErrorMessage = "Mật khẩu phải có ít nhất 8 ký tự")]
+        public string Password { set; get; }
 
         [Required(ErrorMessage = "Bạn cần nhập số điện thoại.")]
         public string PhoneNumber { set; get; }
-
-        public string Point { get; set; }
     }
 
     public class ResetPasswordViewModel
